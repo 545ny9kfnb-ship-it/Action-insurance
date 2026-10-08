@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://545ny9kfnb-ship-it.github.io/Action-insurance/sitemap.xml
