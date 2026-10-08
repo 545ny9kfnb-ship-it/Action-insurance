@@ -201,7 +201,7 @@
 
     <section id="quote">
       <h2>Get a Quote</h2>
-      <p class="sub">Send us your information and Action Insurance will receive your quote request by email and follow up with you.</p>
+      <p class="sub">Complete the form to request an insurance quote. Online delivery is not guaranteed; for urgent requests, contact our office directly.</p>
 
       <div class="card" style="margin-bottom:18px">
         <h3 style="margin-top:0">Prefer to Contact Us Directly?</h3>
@@ -351,7 +351,7 @@
         </label>
 
         <button class="submit-btn" type="submit">Request My Quote</button>
-        <div class="form-note">Submitting this form requests insurance information or a quote. It does not bind coverage or guarantee a premium.</div>
+        <div class="form-note">Submitting this form requests insurance information or a quote. It does not bind coverage or guarantee a premium. If you do not receive a response, please call our office during business hours.</div>
         <div class="status" id="formStatus" aria-live="polite"></div>
       </form>
     </section>
@@ -428,12 +428,12 @@
 
         const result = await response.json();
 
-        if (response.ok && result.success !== false) {
-          statusEl.textContent = 'Thank you! Your quote request was emailed to Action Insurance. We will contact you soon.';
+        if (response.ok && (result.success === true || result.success === 'true')) {
+          statusEl.textContent = 'Your quote request was accepted by the form service. Email delivery is not confirmed yet. For urgent assistance, call (561) 996-8998 during office hours.';
           form.reset();
           vinFields.innerHTML = '<input name="Vehicle 1 VIN" type="text" maxlength="17" minlength="11" placeholder="Vehicle 1 VIN" required>';
         } else {
-          statusEl.textContent = 'We could not send the form. Please call or text (561) 996-8998.';
+          statusEl.textContent = 'We could not confirm your quote request was sent. Please call (561) 996-8998 during office hours or email actioninsgroup@aol.com.';
         }
       } catch (err) {
         statusEl.textContent = 'We could not send the form. Please call or text (561) 996-8998.';
