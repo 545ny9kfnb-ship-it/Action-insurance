@@ -217,7 +217,7 @@
       </div>
 
       <form class="quote-form" id="quoteForm"
-            action="https://formsubmit.co/ajax/actioninsgroup@aol.com"
+            action="https://formsubmit.co/actioninsgroup@aol.com"
             method="POST">
         <input type="hidden" name="_subject" value="New Action Insurance Quote Lead">
         <input type="hidden" name="_template" value="table">
@@ -413,31 +413,9 @@
 
     vehicleSelect.addEventListener('change', renderVinFields);
 
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      statusEl.textContent = 'Sending your request...';
-
-      const formData = new FormData(form);
-
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: formData
-        });
-
-        const result = await response.json();
-
-        if (response.ok && (result.success === true || result.success === 'true')) {
-          statusEl.textContent = 'Your quote request was accepted by the form service. Email delivery is not confirmed yet. For urgent assistance, call (561) 996-8998 during office hours.';
-          form.reset();
-          vinFields.innerHTML = '<input name="Vehicle 1 VIN" type="text" maxlength="17" minlength="11" placeholder="Vehicle 1 VIN" required>';
-        } else {
-          statusEl.textContent = 'We could not confirm your quote request was sent. Please call (561) 996-8998 during office hours or email actioninsgroup@aol.com.';
-        }
-      } catch (err) {
-        statusEl.textContent = 'We could not send the form. Please call or text (561) 996-8998.';
-      }
+    // Submit normally so FormSubmit can display its activation or error page.
+    form.addEventListener('submit', function() {
+      statusEl.textContent = 'Opening secure form submission service...';
     });
   </script>
 </body>
