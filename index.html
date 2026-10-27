@@ -44,6 +44,19 @@
       box-shadow:0 18px 50px rgba(16,24,40,.15);
     }
     .brand{font-size:18px;font-weight:800;letter-spacing:.12em}
+    .skip-link{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{position:static;width:auto;height:auto;padding:10px 14px;background:#fff;color:var(--accent2);border:2px solid var(--accent2);border-radius:8px}
+    a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px solid #F79009;outline-offset:3px}
+    .site-nav{
+      display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+      padding:10px 0 4px;margin-top:6px;
+    }
+    .site-nav a{
+      color:var(--accent2);font-weight:700;text-decoration:none;
+      padding:9px 12px;border-radius:9px;
+    }
+    .site-nav a:hover,.site-nav a:focus-visible{background:#EAF1FF;text-decoration:underline}
+    .site-nav .nav-quote{margin-left:auto;background:var(--accent);color:white}
     h1{font-size:46px;line-height:1.05;margin:14px 0 14px;max-width:820px}
     .hero p{font-size:20px;max-width:760px;color:#EEF4FF;margin:0 0 28px}
     .actions{display:flex;gap:12px;flex-wrap:wrap}
@@ -142,14 +155,24 @@
       .field.full{grid-column:auto}
       .actions{flex-direction:column}
       .btn{text-align:center}
+      .site-nav{gap:4px}
+      .site-nav a{padding:9px 8px}
+      .site-nav .nav-quote{margin-left:0}
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <main class="wrap" id="main-content" tabindex="-1">
+    <nav class="site-nav" aria-label="Insurance services">
+      <a href="auto-insurance.html">Auto insurance</a>
+      <a href="commercial-auto-insurance.html">Commercial auto</a>
+      <a href="sr-22.html">SR-22 help</a>
+      <a class="nav-quote" href="#quote">Request a quote</a>
+    </nav>
     <section class="hero">
       <div class="brand">ACTION INSURANCE</div>
-      <h1>Car Insurance in Belle Glade, FL — Quotes Across Florida</h1>
+      <h1>Car Insurance in Belle Glade, FL - Quotes Across Florida</h1>
       <p>
         Looking for car insurance anywhere in Florida? Based in Belle Glade, Action Insurance helps customers statewide with
         auto, truck/commercial auto, homeowners, business insurance and SR-22 filings.
@@ -167,11 +190,11 @@
       <p class="sub">Personal and business insurance options with direct local assistance.</p>
       <div class="grid">
         <div class="card">
-          <h3>Car &amp; Auto Insurance Quotes</h3>
+          <h3><a href="auto-insurance.html">Car &amp; Auto Insurance Quotes</a></h3>
           <p>Coverage for personal vehicles, new purchases, policy changes, liability and full coverage options.</p>
         </div>
         <div class="card">
-          <h3>Truck Insurance</h3>
+          <h3><a href="commercial-auto-insurance.html">Truck &amp; Commercial Auto Insurance</a></h3>
           <p>Insurance assistance for trucks and commercial vehicles, including businesses that rely on vehicles for work.</p>
         </div>
         <div class="card">
@@ -183,7 +206,7 @@
           <p>Insurance solutions for business owners who need protection for their operations and commercial risks.</p>
         </div>
         <div class="card">
-          <h3>SR-22</h3>
+          <h3><a href="sr-22.html">SR-22 filing help</a></h3>
           <p>Help obtaining required SR-22 insurance filings and understanding the coverage needed to stay compliant.</p>
         </div>
         <div class="card">
@@ -196,7 +219,7 @@
     <section aria-labelledby="local-help-heading">
       <h2 id="local-help-heading">Local Insurance Agency in Belle Glade Serving Florida</h2>
       <p class="sub">Action Insurance is based in Belle Glade, Florida, and assists insurance customers throughout the state, including Miami, Fort Lauderdale, West Palm Beach, Orlando, Tampa and Jacksonville. Whether you're looking for a first auto insurance policy, reviewing coverage for an existing vehicle, or asking about an SR-22 filing, contact our office to discuss available insurance options and request a quote. Pricing and eligibility depend on the insurer and applicant.</p>
-      <p><strong>Our Belle Glade office:</strong> 317 N Main Street, Belle Glade, FL 33430 · <a href="tel:+15619968998">(561) 996-8998</a> · Monday–Friday, 9 AM–5 PM.</p>
+      <p><strong>Our Belle Glade office:</strong> 317 N Main Street, Belle Glade, FL 33430 � <a href="tel:+15619968998">(561) 996-8998</a> � Monday-Friday, 9 AM-5 PM.</p>
     </section>
 
     <section aria-labelledby="questions-heading">
@@ -342,9 +365,9 @@
           </div>
 
           <div class="field full">
-            <label>Vehicle VIN(s) *</label>
+            <label for="vehicle-vin-1">Vehicle VIN(s) *</label>
             <div id="vinFields">
-              <input name="Vehicle 1 VIN" type="text" maxlength="17" minlength="11" placeholder="Vehicle 1 VIN" required>
+              <input id="vehicle-vin-1" name="Vehicle 1 VIN" type="text" maxlength="17" minlength="11" aria-label="Vehicle 1 VIN" placeholder="Vehicle 1 VIN" required>
             </div>
           </div>
 
@@ -392,8 +415,8 @@
     <footer>
       <strong>Action Insurance</strong><br>
       317 N Main Street, Belle Glade, FL 33430<br>
-      (561) 996-8998 · actioninsgroup@aol.com<br>
-      Office Hours: Monday-Friday, 9:00 AM-5:00 PM · Calls only during office hours · Text or submit the quote form anytime
+      (561) 996-8998 � actioninsgroup@aol.com<br>
+      Office Hours: Monday-Friday, 9:00 AM-5:00 PM � Calls only during office hours � Text or submit the quote form anytime
     </footer>
   </main>
 
@@ -402,8 +425,12 @@
     const statusEl = document.getElementById('formStatus');
     const vehicleSelect = document.getElementById('vehicles');
     const vinFields = document.getElementById('vinFields');
+    const storedVinValues = new Map();
 
     function renderVinFields() {
+      vinFields.querySelectorAll('input').forEach((input, index) => {
+        storedVinValues.set(index + 1, input.value);
+      });
       let count = parseInt(vehicleSelect.value || '1', 10);
       if (count > 6) count = 6;
       vinFields.innerHTML = '';
@@ -411,8 +438,11 @@
         const input = document.createElement('input');
         input.name = `Vehicle ${i} VIN`;
         input.type = 'text';
+        input.id = 'vehicle-vin-' + i;
         input.maxLength = 17;
         input.minLength = 11;
+        input.setAttribute('aria-label', 'Vehicle ' + i + ' VIN');
+        input.value = storedVinValues.get(i) || '';
         input.placeholder = `Vehicle ${i} VIN`;
         input.required = true;
         input.style.marginBottom = '10px';
@@ -429,3 +459,4 @@
   </script>
 </body>
 </html>
+
