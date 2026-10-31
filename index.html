@@ -173,6 +173,13 @@
           <span>I agree that Action Insurance may contact me about my insurance quote request using my selected contact method. I request a phone call only if I select Call. Message and data rates may apply for texts.</span>
         </label>
 
+        <label class="check">
+          <input type="checkbox" id="marketingEmailOptIn" name="Marketing Email Opt-In" value="Yes - insurance email updates from Action Insurance">
+          <span>Optional: email me insurance updates and offers from Action Insurance. I can unsubscribe at any time by replying UNSUBSCRIBE. My quote request does not require this choice.</span>
+        </label>
+        <input type="hidden" id="marketingOptInRecordedAt" name="Marketing Opt-In Recorded At" value="Not subscribed">
+        <input type="hidden" name="Marketing Opt-In Wording" value="Optional: email me insurance updates and offers from Action Insurance. I can unsubscribe at any time by replying UNSUBSCRIBE. My quote request does not require this choice. Version 2026-10-31.">
+
         <button class="button primary submit" type="submit">Request My Free Quote →</button>
         <div class="form-note">Submitting this form requests insurance information or a quote. It does not bind coverage or guarantee a premium. If you do not receive a response, please text or email our office.</div>
         <div class="status" id="formStatus" aria-live="polite"></div>
@@ -240,6 +247,7 @@
 
     // Submit normally so FormSubmit can display its activation or error page.
     form.addEventListener('submit', function() {
+      document.getElementById('marketingOptInRecordedAt').value = document.getElementById('marketingEmailOptIn').checked ? new Date().toISOString() : 'Not subscribed';
       statusEl.textContent = 'Opening secure form submission service...';
     });
   </script>
