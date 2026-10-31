@@ -13,46 +13,234 @@
 <style>
 :root{--navy:#12356a;--blue:#175deb;--text:#1b3454;--muted:#75869c;--line:#e0e8f2;--pale:#f3f7fd}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;color:var(--text);background:#fff;font:15px/1.7 'Segoe UI',Arial,sans-serif}a{color:var(--blue);text-decoration:none}button,input,textarea,select{font:inherit}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #eab867;outline-offset:4px}.skip{position:absolute;left:-9999px}.skip:focus{left:20px;top:20px;background:#fff;z-index:5;padding:12px}.wrap{max-width:1160px;padding:0 30px;margin:0 auto}.topline{background:var(--navy);color:#c0d1e9;font-size:11px;padding:8px 0}.topline .wrap{display:flex;justify-content:space-between}.topline a{color:white}.nav{display:flex;justify-content:space-between;align-items:center;gap:22px;padding-top:25px;padding-bottom:25px}.brand{display:flex;align-items:center;gap:10px;color:var(--navy);font-weight:800;font-size:20px;letter-spacing:1px;line-height:1.1}.brand small{display:block;font-size:9px;font-weight:600;letter-spacing:3px;margin-top:6px}.brand svg{width:40px;height:44px}.navlinks{display:flex;align-items:center;gap:23px;font-size:12px}.navlinks>a{color:#75879f}.button{border:1px solid var(--line);border-radius:7px;padding:12px 19px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-size:12px;font-weight:650;background:#fff;color:var(--navy);cursor:pointer;line-height:1.5;transition:.15s}.button:hover{transform:translateY(-1px);box-shadow:0 4px 15px #1c4c8b10}.button.primary{background:var(--blue);border-color:var(--blue);color:white}.button.white{background:white;color:var(--navy);border-color:white}.eyebrow{font-size:10px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:#6d8fbe;margin-bottom:18px}.hero{background:linear-gradient(125deg,#f2f7ff,#f8fbff);border-top:1px solid #eaf0fa;border-bottom:1px solid #eaf0fa;overflow:hidden}.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:70px;align-items:center;padding-top:68px;padding-bottom:68px}.hero h1{font-size:54px;line-height:1.1;letter-spacing:-2px;font-weight:650;margin:0 0 23px}.hero h1 span{color:var(--blue)}.hero-copy>p{color:#7a8ea9;max-width:465px;font-size:15px;line-height:1.9;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap}.hero-note{margin-top:18px!important;font-size:11px!important;color:#91a0b5!important}.hero-note span{color:#3a9b79;margin-right:5px}.choice-card{background:var(--navy);color:#fff;border-radius:18px;padding:33px;position:relative;overflow:hidden;box-shadow:0 22px 50px #12356a1b}.choice-card:before{content:'';position:absolute;width:260px;height:260px;border:1px solid #ffffff10;border-radius:50%;right:-80px;top:-70px;box-shadow:0 0 0 35px #ffffff03,0 0 0 70px #ffffff03}.choice-card .eyebrow{color:#a0bde8;margin-bottom:16px}.choice-number{font-size:85px;line-height:1;font-weight:600;letter-spacing:-5px;position:relative}.choice-card h2{font-size:21px;margin:12px 0 14px;font-weight:550;letter-spacing:-.5px}.choice-card p{font-size:12px;color:#a8bfdf;line-height:1.9;margin:0 0 26px}.choice-list{border-top:1px solid #ffffff17;padding-top:18px;display:flex;gap:10px;flex-wrap:wrap;color:#c2d5f2;font-size:10px}.choice-list span{background:#ffffff09;padding:5px 10px;border-radius:5px}.trustbar{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding-top:30px;padding-bottom:30px;border-bottom:1px solid #e8edf5}.trustitem{display:flex;gap:12px;align-items:center}.trusticon{height:36px;width:36px;background:#f0f5ff;border-radius:9px;display:grid;place-items:center;color:var(--blue);font-size:16px;flex-shrink:0}.trustitem strong{display:block;font-size:12px;font-weight:650}.trustitem small{font-size:10px;color:#8a9ab0}.section{padding:64px 0}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}.section h2{font-size:32px;line-height:1.2;letter-spacing:-1px;margin:0 0 12px;font-weight:600}.section .eyebrow{margin-bottom:12px}.section-sub{color:#8a9bb1;font-size:13px;margin:0;max-width:510px}.coverage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}.coverage-card{border:1px solid var(--line);border-radius:11px;padding:25px;display:flex;flex-direction:column;position:relative}.coverage-card.featured{border-color:#a8c3f1;background:linear-gradient(135deg,#f6f9ff,#fff)}.coverage-icon{font-size:24px;line-height:1.5;margin-bottom:17px;color:#5c86c0}.coverage-card h3{font-size:17px;letter-spacing:-.3px;margin:0 0 9px;font-weight:600}.coverage-card p{font-size:12px;color:#8b9cb3;line-height:1.9;margin:0 0 19px}.coverage-card a{font-size:11px;font-weight:600;margin-top:auto}.tag{position:absolute;top:18px;right:18px;background:#e8f0ff;color:#5f88c9;border-radius:4px;padding:3px 7px;font-size:8px;letter-spacing:1px;font-weight:600}.carrier-section{background:#f8fafd;border-top:1px solid #edf1f7;border-bottom:1px solid #edf1f7}.carrier-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:11px;margin-top:27px}.carrier{background:#fff;border:1px solid #e4eaf3;border-radius:7px;padding:16px 9px;text-align:center;display:grid;place-items:center;min-height:64px;font-size:12px;font-weight:650;color:#647d9f;letter-spacing:-.2px}.carrier:nth-child(3n+1){color:#3d68a4}.carrier-note{font-size:10px;color:#9aa7b9;margin:18px 0 0;max-width:760px}.process{display:grid;grid-template-columns:repeat(3,1fr);gap:35px;margin-top:34px}.step-num{height:34px;width:34px;background:#ecf3ff;color:#6c94d0;display:grid;place-items:center;border-radius:9px;font-size:11px;font-weight:650;margin-bottom:18px}.process h3{font-size:15px;margin:0 0 9px}.process p{font-size:12px;line-height:1.9;color:#91a0b5}.quote-section{background:#f2f6fc;border-top:1px solid #e6edf7}.quote-layout{display:grid;grid-template-columns:.9fr 1.2fr;gap:65px;align-items:start}.quote-intro{padding-top:10px}.quote-intro h2{font-size:37px}.quote-intro>p{color:#8194af;font-size:13px;line-height:1.9}.contact-box{border:1px solid #dae5f5;background:#fff;border-radius:10px;padding:23px;margin-top:28px}.contact-box .phone{font-size:25px;font-weight:650;letter-spacing:-.7px;color:var(--navy)}.contact-box p{font-size:11px;color:#99a8bb;margin:8px 0 0}.contact-box .address{font-size:12px;color:#7b90ae;margin:17px 0}.contact-box .actions{gap:9px}.quote-form{background:#fff;border:1px solid #e0e8f3;border-radius:13px;padding:30px;box-shadow:0 12px 35px #17376307}.quote-form h3{font-size:18px;font-weight:600;letter-spacing:-.4px;margin:0 0 5px}.quote-form>p{font-size:11px;color:#91a0b6;margin:0 0 24px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:11px;font-weight:550;color:#71859f}input,select,textarea{width:100%;border:1px solid #e0e7f1;border-radius:6px;padding:11px 12px;color:#4d6689;background:white;font-size:12px;min-width:0}input::placeholder,textarea::placeholder{color:#adb9c9}textarea{resize:vertical;min-height:83px}.check{display:flex;align-items:flex-start;gap:8px;font-size:10px;color:#8d9db3;line-height:1.8;margin:17px 0}.check input{width:14px;height:14px;flex-shrink:0;accent-color:#175deb;margin-top:3px}.submit{width:100%;margin-top:6px}.form-note{font-size:9px;color:#a1aec0;line-height:1.8;margin:13px 0 0}.commercial-fields{display:none;grid-column:1/-1}.commercial-fields.visible{display:grid;grid-template-columns:1fr 1fr;gap:17px}.faq{max-width:850px;margin:auto}.faq details{border-bottom:1px solid var(--line);padding:20px 0}.faq summary{cursor:pointer;font-size:14px;font-weight:550;color:#5d7596}.faq details p{font-size:12px;color:#92a2b8;line-height:1.9;margin:15px 0 0}.final-cta{background:var(--navy);padding:45px 0;color:#fff}.final-cta .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px}.final-cta h2{font-size:27px;line-height:1.2;letter-spacing:-.8px;font-weight:550;margin:0 0 8px}.final-cta p{font-size:12px;color:#a5bfdf;margin:0}.footer{padding:40px 0 30px;color:#9aabc0;font-size:10px}.footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;margin-bottom:30px}.footer strong{color:#5b7498;font-weight:650;font-size:12px}.footer p{margin:8px 0 0;line-height:1.9}.footer a{color:#6f8eb6}.footer-bottom{border-top:1px solid #e8edf5;padding-top:20px;font-size:9px;color:#acb7c7;display:flex;gap:30px;justify-content:space-between}.mobile-call{display:none}.status{font-size:12px;color:var(--blue);margin-top:12px}.privacy-note{font-size:10px;line-height:1.8;color:#97a6ba;margin-top:22px}.inline-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px}
 @media(max-width:1000px){.hero .wrap{gap:35px}.hero h1{font-size:45px}.carrier-grid{grid-template-columns:repeat(4,1fr)}.quote-layout{gap:35px}.navlinks{gap:15px}.navlinks>a:not(.button){display:none}}@media(max-width:720px){.wrap{padding-left:22px;padding-right:22px}.topline .wrap>span:first-child{display:none}.topline .wrap{justify-content:center}.nav{padding-top:20px;padding-bottom:20px}.brand{font-size:17px}.brand svg{width:33px}.navlinks .button{font-size:10px;padding:10px 12px}.hero .wrap{grid-template-columns:1fr;padding-top:43px;padding-bottom:42px;gap:28px}.hero h1{font-size:43px}.hero-copy>p{font-size:14px}.choice-card{padding:24px}.choice-number{font-size:62px}.choice-card h2{font-size:19px}.choice-card p{margin-bottom:18px}.choice-list{padding-top:13px}.trustbar{gap:20px;grid-template-columns:1fr;padding-top:24px;padding-bottom:24px}.trustitem{gap:12px}.trustitem small{font-size:11px}.section{padding:43px 0}.section-head{display:block;margin-bottom:24px}.section h2{font-size:28px}.section-head>.button{margin-top:18px}.coverage-grid{grid-template-columns:1fr 1fr;gap:13px}.coverage-card{padding:20px}.coverage-card p{font-size:11px}.coverage-card h3{font-size:16px}.tag{font-size:7px;top:13px;right:13px}.carrier-grid{grid-template-columns:repeat(3,1fr);gap:8px}.carrier{font-size:10px;padding:12px 7px;min-height:61px}.process{grid-template-columns:1fr;gap:20px}.process h3{margin-top:-45px;margin-left:53px}.process p{margin-left:53px;margin-top:13px}.quote-layout{grid-template-columns:1fr;gap:28px}.quote-intro h2{font-size:32px}.quote-form{padding:24px}.form-grid{gap:14px}.contact-box{margin-top:22px}.final-cta .wrap{display:block}.final-cta .button{margin-top:20px}.final-cta h2{font-size:25px}.footer-top{grid-template-columns:1fr;gap:21px}.footer-bottom{display:block}.footer-bottom span{display:block;margin-bottom:7px}.footer{padding-bottom:86px}.mobile-call{position:fixed;bottom:0;left:0;right:0;display:flex;gap:10px;background:#fff;padding:10px 18px;border-top:1px solid #dce6f4;z-index:3}.mobile-call .button{flex:1;font-size:11px;padding:11px}.hero .actions .button{font-size:11px;padding:12px 15px}}@media(max-width:400px){.coverage-grid{grid-template-columns:1fr}.hero h1{font-size:38px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.commercial-fields.visible{grid-template-columns:1fr}.brand small{letter-spacing:2px}.hero .actions{flex-direction:column}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.button:hover{transform:none}}
+.contact-preference-note{font-size:10px;line-height:1.8;color:#8295af}#vinFields input+input{margin-top:9px}.field.full>label{display:block} .quote-form .check input{width:14px;height:14px;flex-shrink:0}
+@media(max-width:720px){.mobile-call .button{padding:10px 8px;font-size:10px}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main-content">Skip to content</a>
-<div class="topline"><div class="wrap"><span>Belle Glade roots. Florida reach.</span><span>Talk to our team · Mon–Fri, 9 AM–5 PM · <a href="tel:+15619968998">(561) 996-8998</a></span></div></div>
-<header class="wrap nav"><a href="./" class="brand" aria-label="Action Insurance home"><svg viewBox="0 0 44 48" aria-hidden="true"><path d="M22 2 41 9v14c0 12-11 20-19 24C14 43 3 35 3 23V9Z" fill="#175deb"/><path d="m12 23 7 7 14-17" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>ACTION<small>INSURANCE</small></span></a><nav class="navlinks" aria-label="Main navigation"><a href="#coverage">Coverage</a><a href="#companies">Our companies</a><a href="#how-it-works">How it works</a><a href="#quote" class="button primary">Get a free quote <span>↗</span></a></nav></header>
+<div class="topline"><div class="wrap"><span>Belle Glade roots. Florida reach.</span><span>Text or email our team · Mon–Fri, 9 AM–5 PM · <a href="sms:+15619968998">Text (561) 996-8998</a></span></div></div>
+<header class="wrap nav"><a href="./" class="brand" aria-label="Action Insurance home"><svg viewBox="0 0 44 48" aria-hidden="true"><path d="M22 2 41 9v14c0 12-11 20-19 24C14 43 3 35 3 23V9Z" fill="#175deb"/><path d="m12 23 7 7 14-17" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>ACTION<small>INSURANCE</small></span></a><nav class="navlinks" aria-label="Main navigation"><a href="#coverage-options">Coverage</a><a href="#companies">Our companies</a><a href="#how-it-works">How it works</a><a href="#quote" class="button primary">Get a free quote <span>↗</span></a></nav></header>
 <main id="main-content">
-<section class="hero"><div class="wrap"><div class="hero-copy"><div class="eyebrow">MORE CHOICE. A PERSONAL CONVERSATION.</div><h1>Life moves.<br>Business moves.<br><span>We help you<br>move protected.</span></h1><p>From your first car to your working fleet, let’s talk about coverage that fits. We represent <strong>18 insurance companies</strong> and help customers across Florida explore their options.</p><div class="actions"><a class="button primary" href="#quote">Request your free quote →</a><a class="button" href="tel:+15619968998">Call (561) 996-8998</a></div><p class="hero-note"><span>✓</span> Free, no-obligation quote request · A real Florida team</p></div><aside class="choice-card"><div class="eyebrow">YOUR OPTIONS START HERE</div><div class="choice-number">18<span style="font-size:28px;letter-spacing:0;color:#8eb6ed">.</span></div><h2>Insurance companies.<br>One local team to talk to.</h2><p>Tell us what you drive, what you own, or how your business works. We’ll help you explore available coverage options and take the next step.</p><div class="choice-list"><span>Auto</span><span>Truck &amp; commercial auto</span><span>Home</span><span>Business</span><span>SR-22 help</span></div></aside></div></section>
+<section class="hero"><div class="wrap"><div class="hero-copy"><div class="eyebrow">MORE CHOICE. A PERSONAL CONVERSATION.</div><h1>Life moves.<br>Business moves.<br><span>We help you<br>move protected.</span></h1><p>From your first car to your working fleet, let’s talk about coverage that fits. We represent <strong>18 insurance companies</strong> and help customers across Florida explore their options.</p><div class="actions"><a class="button primary" href="#quote">Request your free quote →</a><a class="button" href="sms:+15619968998">Text our team</a><a class="button" href="mailto:actioninsgroup@aol.com?subject=Insurance%20quote%20request">Email our team</a></div><p class="hero-note"><span>✓</span> Free, no-obligation quote request · A real Florida team</p></div><aside class="choice-card"><div class="eyebrow">YOUR OPTIONS START HERE</div><div class="choice-number">18<span style="font-size:28px;letter-spacing:0;color:#8eb6ed">.</span></div><h2>Insurance companies.<br>One local team to talk to.</h2><p>Tell us what you drive, what you own, or how your business works. We’ll help you explore available coverage options and take the next step.</p><div class="choice-list"><span>Auto</span><span>Truck &amp; commercial auto</span><span>Home</span><span>Business</span><span>SR-22 help</span></div></aside></div></section>
 <div class="wrap trustbar"><div class="trustitem"><span class="trusticon">↗</span><div><strong>More options to explore</strong><small>18 insurance companies represented</small></div></div><div class="trustitem"><span class="trusticon">◎</span><div><strong>Here in Florida. Here for you.</strong><small>Based in Belle Glade, serving the state</small></div></div><div class="trustitem"><span class="trusticon">✓</span><div><strong>Start with a free quote</strong><small>A conversation, without the obligation</small></div></div></div>
-<section class="section wrap" id="coverage"><div class="section-head"><div><div class="eyebrow">FOR THE ROAD. FOR HOME. FOR WHAT’S NEXT.</div><h2>What would you like to protect?</h2><p class="section-sub">Personal and business coverage, with someone to help you ask the right questions.</p></div><a class="button" href="#quote">Let’s find your next step →</a></div><div class="coverage-grid">
+<section class="section wrap" id="coverage-options"><div class="section-head"><div><div class="eyebrow">FOR THE ROAD. FOR HOME. FOR WHAT’S NEXT.</div><h2>What would you like to protect?</h2><p class="section-sub">Personal and business coverage, with someone to help you ask the right questions.</p></div><a class="button" href="#quote">Let’s find your next step →</a></div><div class="coverage-grid">
 <article class="coverage-card featured"><span class="tag">FOR YOUR BUSINESS</span><div class="coverage-icon">↗</div><h3>Truck &amp; commercial auto</h3><p>Your vehicles keep your business moving. Talk to us about trucks, work vehicles, and commercial auto quote options.</p><a href="commercial-auto-insurance.html">Explore truck coverage →</a></article>
 <article class="coverage-card"><div class="coverage-icon">◇</div><h3>Car &amp; auto</h3><p>Buying a car, reviewing a policy, or looking at new options? Start with a conversation about your vehicle and coverage needs.</p><a href="auto-insurance.html">Explore auto insurance →</a></article>
 <article class="coverage-card"><div class="coverage-icon">⌂</div><h3>Homeowners</h3><p>There’s a lot behind your front door. Ask about coverage options for your home and the things that make it yours.</p><a href="#quote" data-coverage="Home Insurance">Ask about home insurance →</a></article>
 <article class="coverage-card"><div class="coverage-icon">▤</div><h3>Business insurance</h3><p>Tell us about your operations, property, and day-to-day work. We’ll help you explore available insurance options.</p><a href="#quote" data-coverage="Business Insurance">Start a business quote →</a></article>
 <article class="coverage-card"><div class="coverage-icon">✓</div><h3>SR-22 assistance</h3><p>Have a filing requirement? Bring your notice and let’s discuss the assistance and quote options available for your situation.</p><a href="sr-22.html">Get SR-22 information →</a></article>
-<article class="coverage-card"><div class="coverage-icon">↻</div><h3>Policy reviews</h3><p>A new vehicle, a growing business, or a change at home can be a good reason to revisit your coverage with our team.</p><a href="#quote" data-coverage="Policy Review">Let’s review your options →</a></article></div></section>
+<article class="coverage-card"><div class="coverage-icon">↻</div><h3>Policy reviews</h3><p>A new vehicle, a growing business, or a change at home can be a good reason to revisit your coverage with our team.</p><a href="#quote" data-coverage="Other">Let’s review your options →</a></article></div></section>
 <section class="section carrier-section" id="companies"><div class="wrap"><div class="eyebrow">CHOICE IS PART OF THE SERVICE.</div><h2>Recognizable companies.<br>Personal, local assistance.</h2><p class="section-sub">We represent 18 insurance companies. Tell us what you need, and we’ll discuss the options available for your situation.</p><div class="carrier-grid">
 <div class="carrier">GEICO</div><div class="carrier">Progressive</div><div class="carrier">National General</div><div class="carrier">National Indemnity</div><div class="carrier">National Interstate</div><div class="carrier">Bristol West</div><div class="carrier">Dairyland</div><div class="carrier">Kemper / Infinity</div><div class="carrier">AssuranceAmerica</div><div class="carrier">GAINSCO</div><div class="carrier">Pearl Holding</div><div class="carrier">Foremost</div><div class="carrier">Mercury</div><div class="carrier">Ocean Harbor</div><div class="carrier">United Automobile (UAIC)</div><div class="carrier">Citizens</div><div class="carrier">Universal Property &amp; Casualty</div><div class="carrier">Tower Hill</div>
 </div><p class="carrier-note">Companies and brands listed reflect our agency relationships. Available insurers, products, eligibility, and rates vary by coverage type, location, and applicant. Every company listed may not offer every type of coverage.</p></div></section>
-<section class="section wrap" id="how-it-works"><div class="eyebrow">A SIMPLE WAY TO GET STARTED.</div><h2>Your next step doesn’t have to be complicated.</h2><div class="process"><div><div class="step-num">01</div><h3>Tell us what you need.</h3><p>Choose the coverage you’re interested in and share a few contact details. No VIN is needed just to start the conversation.</p></div><div><div class="step-num">02</div><h3>Talk to a real person.</h3><p>Our team will discuss your situation and the information needed to explore available quote options.</p></div><div><div class="step-num">03</div><h3>Explore your options.</h3><p>Ask questions about price, limits, and coverage. Your quote request is free and comes without an obligation to buy.</p></div></div></section>
-<section class="section quote-section" id="quote"><div class="wrap quote-layout"><div class="quote-intro"><div class="eyebrow">LET’S TALK ABOUT WHAT MATTERS.</div><h2>A free quote starts<br>with a hello.</h2><p>Cars, homes, trucks, businesses—we’re ready to hear what you need. Start your request here or call our Belle Glade office during business hours.</p><div class="contact-box"><div class="eyebrow" style="margin-bottom:8px">PREFER TO CALL?</div><a class="phone" href="tel:+15619968998">(561) 996-8998</a><p>Monday–Friday, 9 AM–5 PM<br>Alternate: <a href="tel:+15619968997">(561) 996-8997</a></p><div class="address">317 N Main Street<br>Belle Glade, FL 33430</div><div class="actions"><a class="button" href="mailto:actioninsgroup@aol.com">Email our team ↗</a><a class="button" href="sms:+15619968998">Text our office ↗</a></div><p>Texts and online requests may be sent anytime. Text availability depends on the business phone service. For an urgent request, call during business hours.</p></div><p class="privacy-note">Please don’t send Social Security numbers, driver’s-license numbers, payment details, or other sensitive information through this form. We can discuss any additional information needed when we speak.</p></div>
-<form class="quote-form" id="quoteForm" action="https://formsubmit.co/actioninsgroup@aol.com" method="POST"><h3>What can we help you protect?</h3><p>A few details now. A real conversation next.</p><input type="hidden" name="_subject" value="New Action Insurance Quote Lead"><input type="hidden" name="_template" value="table"><input type="hidden" id="campaign-source" name="Campaign Source" value="Website"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true"><div class="form-grid">
-<div class="field full"><label for="insurance">Insurance you’re interested in *</label><select id="insurance" name="Insurance Needed" required><option value="">Select coverage</option><option>Truck / Commercial Auto Insurance</option><option>Auto Insurance</option><option>Home Insurance</option><option>Business Insurance</option><option>SR-22</option><option>Policy Review</option><option>Other</option></select></div>
-<div class="field"><label for="name">Your name *</label><input id="name" name="Full Name" autocomplete="name" required></div><div class="field"><label for="phone">Phone number *</label><input id="phone" name="Phone Number" type="tel" autocomplete="tel" required></div><div class="field"><label for="email">Email</label><input id="email" name="Email" type="email" autocomplete="email"></div><div class="field"><label for="zip">Florida ZIP code *</label><input id="zip" name="ZIP Code" inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" autocomplete="postal-code" required></div>
-<div class="commercial-fields" id="business-fields"><div class="field"><label for="company">Business name</label><input id="company" name="Business Name" autocomplete="organization"></div><div class="field"><label for="vehicles">Number of work vehicles</label><select id="vehicles" name="Number of Work Vehicles"><option value="">Select if applicable</option><option>1</option><option>2–5</option><option>6–10</option><option>11+</option></select></div></div>
-<div class="field full"><label for="contact">Preferred way to reach you *</label><select id="contact" name="Preferred Contact Method" required><option>Call</option><option>Email</option><option>Text</option></select></div><div class="field full"><label for="message">Anything you’d like us to know?</label><textarea id="message" name="Message" placeholder="Optional: tell us about your vehicle, home, business, or current insurance needs."></textarea></div></div>
-<label class="check"><input type="checkbox" name="Contact Consent" value="Yes" required><span>I agree that Action Insurance may contact me by call, email, or text at the details provided about this quote request. Message and data rates may apply.</span></label><label class="check"><input type="checkbox" name="Email Updates Consent" value="Yes"><span>I’d also like occasional insurance updates by email. Optional; I can unsubscribe at any time.</span></label><button class="button primary submit" type="submit">Request my free quote →</button><p class="form-note">A request does not bind coverage or guarantee a premium. Pricing and eligibility depend on the insurer and applicant. Online delivery is not guaranteed; if you do not hear back, please call during office hours.</p><div id="formStatus" class="status" aria-live="polite"></div></form>
+<section class="section wrap" id="how-it-works"><div class="eyebrow">A SIMPLE WAY TO GET STARTED.</div><h2>Your next step doesn’t have to be complicated.</h2><div class="process"><div><div class="step-num">01</div><h3>Tell us what you need.</h3><p>Choose your coverage and share your contact, driver, and vehicle details in our detailed quote form.</p></div><div><div class="step-num">02</div><h3>Choose text or email.</h3><p>Tell us how you want to hear from our team. We’ll follow your selected contact preference; a phone call is optional.</p></div><div><div class="step-num">03</div><h3>Explore your options.</h3><p>Ask questions about price, limits, and coverage. Your quote request is free and comes without an obligation to buy.</p></div></div></section>
+<section class="section quote-section" id="quote"><div class="wrap quote-layout"><div class="quote-intro"><div class="eyebrow">LET’S TALK ABOUT WHAT MATTERS.</div><h2>A free quote starts<br>with a hello.</h2><p>Cars, homes, trucks, businesses—we’re ready to hear what you need. Complete your quote request, text us, or email our Belle Glade team. A phone call is optional.</p><div class="contact-box"><div class="eyebrow" style="margin-bottom:8px">PREFER TEXT OR EMAIL?</div><a class="phone" href="sms:+15619968998">Text (561) 996-8998</a><p>Office hours: Monday–Friday, 9 AM–5 PM<br>You can send a text or email anytime.</p><div class="address">317 N Main Street<br>Belle Glade, FL 33430</div><div class="actions"><a class="button" href="mailto:actioninsgroup@aol.com">Email our team ↗</a><a class="button" href="sms:+15619968998">Text our office ↗</a></div><p>Use the method that works for you. Calls are optional. Text availability depends on the business phone service.</p></div><p class="privacy-note">Please don’t send Social Security numbers, driver’s-license numbers, payment details, or other sensitive information through this form. We can discuss any additional information needed by your preferred contact method.</p></div>
+<form class="quote-form" id="quoteForm"
+            action="https://formsubmit.co/actioninsgroup@aol.com"
+            method="POST">
+        <input type="hidden" name="_subject" value="New Action Insurance Quote Lead">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" id="campaign-source" name="Campaign Source" value="Website">
+        <input type="text" name="_honey" style="display:none">
+
+        <div class="form-grid">
+          <div class="field full">
+            <label for="contact">Preferred Contact Method *</label>
+            <select id="contact" name="Preferred Contact Method" required>
+              <option value="">Select Text or Email</option>
+              <option value="Text">Text</option>
+              <option value="Email">Email</option>
+              <option value="Call">Call (only if I request it)</option>
+            </select>
+            <small class="contact-preference-note">Text and email are welcome. Calls are optional—choose Call only if you want one. A phone number is not required when you choose Email.</small>
+          </div>
+          <div class="field">
+            <label for="name">Full Name *</label>
+            <input id="name" name="Full Name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="phone" id="phone-label">Phone Number *</label>
+            <input id="phone" name="Phone Number" type="tel" autocomplete="tel" required>
+          </div>
+
+          <div class="field">
+            <label for="email" id="email-label">Email</label>
+            <input id="email" name="Email" type="email" autocomplete="email">
+          </div>
+
+          <div class="field">
+            <label for="zip">ZIP Code *</label>
+            <input id="zip" name="ZIP Code" inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" autocomplete="postal-code" required>
+          </div>
+
+          <div class="field">
+            <label for="insurance">Insurance Needed *</label>
+            <select id="insurance" name="Insurance Needed" required>
+              <option value="">Select one</option>
+              <option>Auto Insurance</option>
+              <option>Truck / Commercial Auto Insurance</option>
+              <option>Home Insurance</option>
+              <option>Business Insurance</option>
+              <option>SR-22</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="marital">Marital Status *</label>
+            <select id="marital" name="Marital Status" required>
+              <option value="">Select one</option>
+              <option>Single</option>
+              <option>Married</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="onlydriver">Are You the Only Driver? *</label>
+            <select id="onlydriver" name="Only Driver" required>
+              <option value="">Select one</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="jobtitle">Work Title / Occupation *</label>
+            <input id="jobtitle" name="Work Title / Occupation" type="text" required>
+          </div>
+
+          <div class="field">
+            <label for="vehicles">How Many Vehicles? *</label>
+            <select id="vehicles" name="Number of Vehicles" required>
+              <option value="">Select one</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6+</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="coverage">Coverage Wanted *</label>
+            <select id="coverage" name="Coverage Wanted" required>
+              <option value="">Select one</option>
+              <option>PIP</option>
+              <option>Semi Full Coverage</option>
+              <option>Full Coverage</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="insured">Currently Insured?</label>
+            <select id="insured" name="Currently Insured">
+              <option value="">Select one</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          
+
+          <div class="field">
+            <label for="besttime">Best Time to Contact</label>
+            <select id="besttime" name="Best Time to Contact">
+              <option value="">Any time</option>
+              <option>Morning</option>
+              <option>Afternoon</option>
+              <option>Evening</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="vehicle-vin-1">Vehicle VIN(s) *</label>
+            <div id="vinFields">
+              <input id="vehicle-vin-1" name="Vehicle 1 VIN" type="text" maxlength="17" minlength="11" aria-label="Vehicle 1 VIN" placeholder="Vehicle 1 VIN" required>
+            </div>
+          </div>
+
+          <div class="field full">
+            <label for="message">Anything Else We Should Know?</label>
+            <textarea id="message" name="Message" placeholder="Optional. Please do not include Social Security numbers, driver's-license numbers, payment information, or other highly sensitive information."></textarea>
+          </div>
+        </div>
+
+        <label class="check">
+          <input type="checkbox" name="Contact Consent" value="Yes" required>
+          <span>I agree that Action Insurance may contact me about my insurance quote request using my selected contact method. I request a phone call only if I select Call. Message and data rates may apply for texts.</span>
+        </label>
+
+        <button class="button primary submit" type="submit">Request My Free Quote →</button>
+        <div class="form-note">Submitting this form requests insurance information or a quote. It does not bind coverage or guarantee a premium. If you do not receive a response, please text or email our office.</div>
+        <div class="status" id="formStatus" aria-live="polite"></div>
+      </form>
 </div></section>
 <section class="section wrap"><div class="faq"><div class="eyebrow">A FEW QUESTIONS, ANSWERED.</div><h2>Before we talk.</h2><details><summary>Is the quote request really free?</summary><p>Yes. You can request a free, no-obligation quote. The insurer determines available coverage, eligibility, and pricing. Requesting a quote does not mean coverage is in effect.</p></details><details><summary>Do you help customers outside Belle Glade?</summary><p>Yes. Our office is in Belle Glade, and we assist customers throughout Florida. Let us know your ZIP code and the type of insurance you’re looking for.</p></details><details><summary>Can you help with trucks and work vehicles?</summary><p>Yes. Truck and commercial auto insurance are among the services we offer. Tell us about your business, vehicles, and drivers so we can discuss your needs and available options.</p></details><details><summary>Will all 18 companies offer a quote for my situation?</summary><p>Available companies vary by the coverage you need, your location, and your application. Our agency represents 18 companies, but every company may not offer every product or accept every applicant.</p></details><details><summary>What if I already have insurance?</summary><p>You can ask us to review your coverage needs and explore available options. Keep your existing coverage in place until any replacement policy and its effective date are confirmed.</p></details></div></section>
 <section class="final-cta"><div class="wrap"><div><h2>More choice. A team you can reach.</h2><p>Let’s take the next step together. Action Insurance · Belle Glade, Florida</p></div><a class="button white" href="#quote">Start your free quote →</a></div></section>
 </main>
-<footer class="footer wrap"><div class="footer-top"><div><strong>ACTION INSURANCE</strong><p>317 N Main Street<br>Belle Glade, FL 33430<br>Serving customers across Florida.</p></div><div><strong>Talk to our team</strong><p><a href="tel:+15619968998">(561) 996-8998</a><br><a href="mailto:actioninsgroup@aol.com">actioninsgroup@aol.com</a><br>Monday–Friday, 9 AM–5 PM</p></div><div><strong>Explore your options</strong><div class="inline-links"><a href="auto-insurance.html">Auto</a><a href="commercial-auto-insurance.html">Truck &amp; commercial auto</a><a href="sr-22.html">SR-22 help</a><a href="#quote">Home &amp; business</a></div></div></div><div class="footer-bottom"><span>Action Insurance · 18 insurance companies represented</span><span>Coverage, eligibility, and rates vary by insurer and applicant.</span></div></footer>
-<div class="mobile-call"><a class="button" href="tel:+15619968998">Call our team</a><a class="button primary" href="#quote">Get a free quote →</a></div>
+<footer class="footer wrap"><div class="footer-top"><div><strong>ACTION INSURANCE</strong><p>317 N Main Street<br>Belle Glade, FL 33430<br>Serving customers across Florida.</p></div><div><strong>Talk to our team</strong><p><a href="sms:+15619968998">Text (561) 996-8998</a><br><a href="mailto:actioninsgroup@aol.com">actioninsgroup@aol.com</a><br>Monday–Friday, 9 AM–5 PM</p></div><div><strong>Explore your options</strong><div class="inline-links"><a href="auto-insurance.html">Auto</a><a href="commercial-auto-insurance.html">Truck &amp; commercial auto</a><a href="sr-22.html">SR-22 help</a><a href="#quote">Home &amp; business</a></div></div></div><div class="footer-bottom"><span>Action Insurance · 18 insurance companies represented</span><span>Coverage, eligibility, and rates vary by insurer and applicant.</span></div></footer>
+<div class="mobile-call"><a class="button" href="sms:+15619968998">Text us</a><a class="button" href="mailto:actioninsgroup@aol.com?subject=Insurance%20quote%20request">Email us</a><a class="button primary" href="#quote">Free quote →</a></div>
 <script>
-const coverage=document.getElementById('insurance'),business=document.getElementById('business-fields');
-function setBusiness(){const visible=/Truck|Business/.test(coverage.value);business.classList.toggle('visible',visible);business.querySelectorAll('input,select').forEach(el=>el.disabled=!visible);}
-coverage.addEventListener('change',setBusiness);setBusiness();
-document.querySelectorAll('[data-coverage]').forEach(link=>link.addEventListener('click',()=>{coverage.value=link.dataset.coverage;setBusiness();}));
-const params=new URLSearchParams(location.search);const requested=params.get('coverage');if([...coverage.options].some(o=>o.value===requested)){coverage.value=requested;setBusiness();}
-document.getElementById('campaign-source').value=[params.get('utm_source'),params.get('utm_campaign')].filter(Boolean).join(' / ').slice(0,200)||'Website';
-document.getElementById('quoteForm').addEventListener('submit',event=>{if(document.getElementById('contact').value==='Email'&&!document.getElementById('email').value){event.preventDefault();document.getElementById('email').focus();document.getElementById('formStatus').textContent='Please enter an email address so we can reply by email.';return;}document.getElementById('formStatus').textContent='Opening the quote submission service…';});
-</script>
+    const form = document.getElementById('quoteForm');
+    const statusEl = document.getElementById('formStatus');
+    const vehicleSelect = document.getElementById('vehicles');
+    const vinFields = document.getElementById('vinFields');
+    const storedVinValues = new Map();
+
+    function renderVinFields() {
+      vinFields.querySelectorAll('input').forEach((input, index) => {
+        storedVinValues.set(index + 1, input.value);
+      });
+      let count = parseInt(vehicleSelect.value || '1', 10);
+      if (count > 6) count = 6;
+      vinFields.innerHTML = '';
+      for (let i = 1; i <= count; i++) {
+        const input = document.createElement('input');
+        input.name = `Vehicle ${i} VIN`;
+        input.type = 'text';
+        input.id = 'vehicle-vin-' + i;
+        input.maxLength = 17;
+        input.minLength = 11;
+        input.setAttribute('aria-label', 'Vehicle ' + i + ' VIN');
+        input.value = storedVinValues.get(i) || '';
+        input.placeholder = `Vehicle ${i} VIN`;
+        input.required = true;
+        input.style.marginBottom = '10px';
+        vinFields.appendChild(input);
+      }
+    }
+
+    vehicleSelect.addEventListener('change', renderVinFields);
+
+
+    const contactPreference = document.getElementById('contact');
+    const phoneInput = document.getElementById('phone');
+    const emailInput = document.getElementById('email');
+    function updateContactRequirements() {
+      const byEmail = contactPreference.value === 'Email';
+      phoneInput.required = !byEmail;
+      emailInput.required = byEmail;
+      document.getElementById('phone-label').textContent = byEmail ? 'Phone Number (optional)' : 'Phone Number *';
+      document.getElementById('email-label').textContent = byEmail ? 'Email *' : 'Email';
+    }
+    contactPreference.addEventListener('change', updateContactRequirements);
+    updateContactRequirements();
+    const params = new URLSearchParams(location.search);
+    const coverageSelect = document.getElementById('insurance');
+    const requested = params.get('coverage');
+    if ([...coverageSelect.options].some(option => option.value === requested)) coverageSelect.value = requested;
+    document.querySelectorAll('[data-coverage]').forEach(link => link.addEventListener('click', () => {
+      const requestedCoverage = link.dataset.coverage;
+      if ([...coverageSelect.options].some(option => option.value === requestedCoverage)) coverageSelect.value = requestedCoverage;
+    }));
+    document.getElementById('campaign-source').value = [params.get('utm_source'), params.get('utm_campaign')].filter(Boolean).join(' / ').slice(0, 200) || 'Website';
+
+    // Submit normally so FormSubmit can display its activation or error page.
+    form.addEventListener('submit', function() {
+      statusEl.textContent = 'Opening secure form submission service...';
+    });
+  </script>
 </body></html>
