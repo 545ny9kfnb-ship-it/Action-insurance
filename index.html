@@ -38,12 +38,10 @@
 <section class="section wrap" id="how-it-works"><div class="eyebrow">A SIMPLE WAY TO GET STARTED.</div><h2>Your next step doesn’t have to be complicated.</h2><div class="process"><div><div class="step-num">01</div><h3>Tell us what you need.</h3><p>Choose your coverage and share your contact details. Driver and vehicle questions appear for auto, truck, and SR-22 requests.</p></div><div><div class="step-num">02</div><h3>Choose text or email.</h3><p>Tell us how you want to hear from our team. We’ll follow your selected contact preference; a phone call is optional.</p></div><div><div class="step-num">03</div><h3>Explore your options.</h3><p>Ask questions about price, limits, and coverage. Your quote request is free and comes without an obligation to buy.</p></div></div></section>
 <section class="section quote-section" id="quote"><div class="wrap quote-layout"><div class="quote-intro"><div class="eyebrow">LET’S TALK ABOUT WHAT MATTERS.</div><h2>A free quote starts<br>with a hello.</h2><p>Cars, homes, trucks, businesses—we’re ready to hear what you need. Complete your quote request, text us, or email our Belle Glade team. A phone call is optional.</p><div class="contact-box"><div class="eyebrow" style="margin-bottom:8px">PREFER TEXT OR EMAIL?</div><a class="phone" href="sms:+15619968998">Text (561) 996-8998</a><p>Office hours: Monday–Friday, 9 AM–5 PM<br>You can send a text or email anytime.</p><div class="address">317 N Main Street<br>Belle Glade, FL 33430</div><div class="actions"><a class="button" href="mailto:actioninsgroup@aol.com">Email our team ↗</a><a class="button" href="sms:+15619968998">Text our office ↗</a></div><p>Use the method that works for you. Calls are optional. Text availability depends on the business phone service.</p></div><p class="privacy-note">Please don’t send Social Security numbers, driver’s-license numbers, payment details, or other sensitive information through this form. We can discuss any additional information needed by your preferred contact method.</p></div>
 <form class="quote-form" id="quoteForm"
-            action="https://formsubmit.co/actioninsgroup@aol.com"
+            action="https://action-insurance-cloud.oakenbug2.chatgpt.site/quote-request"
             method="POST">
-        <input type="hidden" name="_subject" value="New Action Insurance Quote Lead">
-        <input type="hidden" name="_template" value="table">
         <input type="hidden" id="campaign-source" name="Campaign Source" value="Website">
-        <input type="text" name="_honey" style="display:none">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
 
         <div class="form-grid">
           <div class="field full">
@@ -182,7 +180,7 @@
         <input type="hidden" name="Marketing Opt-In Wording" value="Optional: email me insurance updates and offers from Action Insurance. I can unsubscribe at any time by replying UNSUBSCRIBE. My quote request does not require this choice. Version 2026-10-31.">
 
         <button class="button primary submit" type="submit">Request My Free Quote →</button>
-        <div class="form-note">Submitting this form requests insurance information or a quote. It does not bind coverage or guarantee a premium. If you do not receive a response, please text or email our office.</div>
+        <div class="form-note">Submitting saves your request securely with Action Insurance and displays a request reference. We use your selected contact method. It does not bind coverage or guarantee a premium. Please keep your reference and email our office if you need help.</div>
         <div class="status" id="formStatus" aria-live="polite"></div>
       </form>
 </div></section>
@@ -261,10 +259,11 @@
     }));
     document.getElementById('campaign-source').value = [params.get('utm_source'), params.get('utm_campaign')].filter(Boolean).join(' / ').slice(0, 200) || 'Website';
 
-    // Submit normally so FormSubmit can display its activation or error page.
+    // Submit directly to our owned intake service, which saves the request before email notification.
     form.addEventListener('submit', function() {
       document.getElementById('marketingOptInRecordedAt').value = document.getElementById('marketingEmailOptIn').checked ? new Date().toISOString() : 'Not subscribed';
-      statusEl.textContent = 'Opening secure form submission service...';
+      statusEl.textContent = 'Saving your request securely with Action Insurance...';
     });
   </script>
 </body></html>
+
