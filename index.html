@@ -35,14 +35,17 @@
 <section class="section carrier-section" id="companies"><div class="wrap"><div class="eyebrow">CHOICE IS PART OF THE SERVICE.</div><h2>Recognizable companies.<br>Personal, local assistance.</h2><p class="section-sub">We represent 20+ insurance companies. Tell us what you need, and we’ll discuss the options available for your situation.</p><div class="carrier-grid">
 <div class="carrier">GEICO</div><div class="carrier">Progressive</div><div class="carrier">National General</div><div class="carrier">National Indemnity</div><div class="carrier">National Interstate</div><div class="carrier">Bristol West</div><div class="carrier">Dairyland</div><div class="carrier">Kemper / Infinity</div><div class="carrier">AssuranceAmerica</div><div class="carrier">GAINSCO</div><div class="carrier">Pearl Holding</div><div class="carrier">Foremost</div><div class="carrier">Mercury</div><div class="carrier">Ocean Harbor</div><div class="carrier">United Automobile (UAIC)</div><div class="carrier">Citizens</div><div class="carrier">Universal Property &amp; Casualty</div><div class="carrier">Tower Hill</div>
 </div><p class="carrier-note">Companies and brands listed reflect our agency relationships. Available insurers, products, eligibility, and rates vary by coverage type, location, and applicant. Every company listed may not offer every type of coverage.</p></div></section>
-<section class="section wrap" id="how-it-works"><div class="eyebrow">A SIMPLE WAY TO GET STARTED.</div><h2>Your next step doesn’t have to be complicated.</h2><div class="process"><div><div class="step-num">01</div><h3>Tell us what you need.</h3><p>Choose your coverage and share your contact details. Driver and vehicle questions appear for auto, truck, and SR-22 requests.</p></div><div><div class="step-num">02</div><h3>Choose text or email.</h3><p>Tell us how you want to hear from our team. We’ll follow your selected contact preference; a phone call is optional.</p></div><div><div class="step-num">03</div><h3>Explore your options.</h3><p>Ask questions about price, limits, and coverage. Your quote request is free and comes without an obligation to buy.</p></div></div></section>
+<section class="section wrap" id="how-it-works"><div class="eyebrow">A SIMPLE WAY TO GET STARTED.</div><h2>Your next step doesn’t have to be complicated.</h2><div class="process"><div><div class="step-num">01</div><h3>Tell us what you need.</h3><p>Choose your coverage and share your contact details. Share your address, household and payment preferences. Driver and vehicle questions apply to auto, truck, and SR-22 requests.</p></div><div><div class="step-num">02</div><h3>Choose text or email.</h3><p>Tell us how you want to hear from our team. We’ll follow your selected contact preference; a phone call is optional.</p></div><div><div class="step-num">03</div><h3>Explore your options.</h3><p>Ask questions about price, limits, and coverage. Your quote request is free and comes without an obligation to buy.</p></div></div></section>
 <section class="section quote-section" id="quote"><div class="wrap quote-layout"><div class="quote-intro"><div class="eyebrow">LET’S TALK ABOUT WHAT MATTERS.</div><h2>A free quote starts<br>with a hello.</h2><p>Cars, homes, trucks, businesses—we’re ready to hear what you need. Complete your quote request, text us, or email our Belle Glade team. A phone call is optional.</p><div class="contact-box"><div class="eyebrow" style="margin-bottom:8px">PREFER TEXT OR EMAIL?</div><a class="phone" href="sms:+15619968998">Text (561) 996-8998</a><p>Office hours: Monday–Friday, 9 AM–5 PM<br>You can send a text or email anytime.</p><div class="address">317 N Main Street<br>Belle Glade, FL 33430</div><div class="actions"><a class="button" href="mailto:actioninsgroup@aol.com">Email our team ↗</a><a class="button" href="sms:+15619968998">Text our office ↗</a></div><p>Use the method that works for you. Calls are optional. Text availability depends on the business phone service.</p></div><p class="privacy-note">Please don’t send Social Security numbers, driver’s-license numbers, payment details, or other sensitive information through this form. We can discuss any additional information needed by your preferred contact method.</p></div>
 <form class="quote-form" id="quoteForm"
             action="https://action-insurance-cloud.oakenbug2.chatgpt.site/quote-request"
             method="POST">
+        <input type="hidden" name="Quote Form Version" value="2026-11-06">
         <input type="hidden" id="campaign-source" name="Campaign Source" value="Website">
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
 
+        <h3>Request your free quote</h3>
+        <p>Tell us what you need. Vehicle and driving questions apply to auto, truck, and SR-22 quotes.</p>
         <div class="form-grid">
           <div class="field full">
             <label for="contact">Preferred Contact Method *</label>
@@ -57,6 +60,11 @@
           <div class="field">
             <label for="name">Full Name *</label>
             <input id="name" name="Full Name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="dob">Date of Birth *</label>
+            <input id="dob" name="Date of Birth" type="date" min="1900-01-01" autocomplete="bday" required>
           </div>
 
           <div class="field">
@@ -87,13 +95,43 @@
             </select>
           </div>
 
-          <div class="field" data-auto-field>
-            <label for="marital">Marital Status *</label>
-            <select id="marital" name="Marital Status" required>
+          <div class="field">
+            <label for="single">Are You Single? *</label>
+            <select id="single" name="Single" required>
               <option value="">Select one</option>
-              <option>Single</option>
-              <option>Married</option>
+              <option>Yes</option>
+              <option>No</option>
             </select>
+          </div>
+
+          <div class="field full">
+            <label for="address">Current Address *</label>
+            <textarea id="address" name="Current Address" autocomplete="street-address" maxlength="500" placeholder="Street address, apartment or unit, city, and state. Enter your ZIP code above." required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="housing">Do You Rent or Own Your Home? *</label>
+            <select id="housing" name="Housing Status" required>
+              <option value="">Select one</option>
+              <option>Rent</option>
+              <option>Own</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="jobtitle">Current Job / Occupation *</label>
+            <input id="jobtitle" name="Work Title / Occupation" type="text" maxlength="200" placeholder="Job title, retired, student, or not currently working" required>
+          </div>
+
+          <div class="field full">
+            <label for="payment">How Would You Like to Pay? *</label>
+            <select id="payment" name="Payment Preference" aria-describedby="payment-note" required>
+              <option value="">Select one</option>
+              <option>Card</option>
+              <option>Automatic payments</option>
+            </select>
+            <small id="payment-note" class="contact-preference-note">Preference only. This does not authorize a payment or enroll you in automatic payments. Do not enter card or bank account details.</small>
           </div>
 
           <div class="field" data-auto-field>
@@ -105,22 +143,24 @@
             </select>
           </div>
 
-          <div class="field" data-auto-field>
-            <label for="jobtitle">Work Title / Occupation *</label>
-            <input id="jobtitle" name="Work Title / Occupation" type="text" required>
+          <div class="field" data-auto-field data-show-when="onlydriver" data-show-value="No">
+            <label for="extra-drivers">How Many Additional Drivers? *</label>
+            <input id="extra-drivers" name="Number of Additional Drivers" type="number" min="1" max="20" step="1" inputmode="numeric" placeholder="Do not include yourself" required>
+          </div>
+
+          <div class="field full" data-auto-field data-show-when="onlydriver" data-show-value="No">
+            <span id="driver-details-label" class="contact-preference-note">Additional drivers: full name and date of birth</span>
+            <div id="driverFields" class="form-grid" aria-labelledby="driver-details-label">
+              <div class="field"><label for="driver-name-1">Additional Driver 1 Full Name *</label><input id="driver-name-1" name="Additional Driver 1 Name" type="text" maxlength="200" autocomplete="off" required></div>
+              <div class="field"><label for="driver-dob-1">Additional Driver 1 Date of Birth *</label><input id="driver-dob-1" name="Additional Driver 1 Date of Birth" type="date" min="1900-01-01" autocomplete="off" required></div>
+            </div>
+            <small class="contact-preference-note">Birth dates and additional-driver details are stored encrypted and available only in the signed-in agency workspace, not in ordinary notification emails.</small>
           </div>
 
           <div class="field" data-auto-field>
-            <label for="vehicles">How Many Vehicles? *</label>
-            <select id="vehicles" name="Number of Vehicles" required>
-              <option value="">Select one</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6+</option>
-            </select>
+            <label for="vehicles">How Many Cars / Vehicles? *</label>
+            <input id="vehicles" name="Number of Vehicles" type="number" min="1" max="50" step="1" inputmode="numeric" placeholder="Enter the exact number" aria-describedby="vehicles-note" required>
+            <small id="vehicles-note" class="contact-preference-note">Enter 1–50. For a larger fleet, please contact our team.</small>
           </div>
 
           <div class="field" data-auto-field>
@@ -133,9 +173,33 @@
             </select>
           </div>
 
+          <div class="field" data-auto-field>
+            <label for="tickets">Have You Had Any Traffic Tickets? *</label>
+            <select id="tickets" name="Traffic Tickets" required>
+              <option value="">Select one</option><option>Yes</option><option>No</option>
+            </select>
+          </div>
+
+          <div class="field" data-auto-field data-show-when="tickets">
+            <label for="ticket-count">If Yes, How Many Tickets? *</label>
+            <input id="ticket-count" name="Number of Tickets" type="number" min="1" max="999" step="1" inputmode="numeric" required>
+          </div>
+
+          <div class="field" data-auto-field>
+            <label for="accidents">Have You Had Any Accidents? *</label>
+            <select id="accidents" name="Accidents" required>
+              <option value="">Select one</option><option>Yes</option><option>No</option>
+            </select>
+          </div>
+
+          <div class="field" data-auto-field data-show-when="accidents">
+            <label for="accident-when">If Yes, How Long Ago Was the Most Recent Accident? *</label>
+            <input id="accident-when" name="Most Recent Accident" type="text" maxlength="200" placeholder="For example: 6 months ago or May 2024" required>
+          </div>
+
           <div class="field">
-            <label for="insured">Currently Insured?</label>
-            <select id="insured" name="Currently Insured">
+            <label for="insured">Do You Have Insurance Now? *</label>
+            <select id="insured" name="Currently Insured" required>
               <option value="">Select one</option>
               <option>Yes</option>
               <option>No</option>
@@ -143,6 +207,16 @@
           </div>
 
           
+
+          <div class="field" data-show-when="insured">
+            <label for="insured-duration">If Yes, How Long Have You Been Insured? *</label>
+            <input id="insured-duration" name="Time Currently Insured" type="text" maxlength="200" placeholder="For example: 2 years or since May 2024" required>
+          </div>
+
+          <div class="field" data-show-when="insured">
+            <label for="insurer">If Yes, With Which Insurance Company? *</label>
+            <input id="insurer" name="Current Insurance Company" type="text" maxlength="200" required>
+          </div>
 
           <div class="field">
             <label for="besttime">Best Time to Contact</label>
@@ -157,8 +231,9 @@
           <div class="field full" data-auto-field>
             <label for="vehicle-vin-1">Vehicle VIN(s) *</label>
             <div id="vinFields">
-              <input id="vehicle-vin-1" name="Vehicle 1 VIN" type="text" maxlength="17" minlength="11" aria-label="Vehicle 1 VIN" placeholder="Vehicle 1 VIN" required>
+              <input id="vehicle-vin-1" name="Vehicle 1 VIN" type="text" maxlength="17" minlength="11" pattern="[A-HJ-NPR-Za-hj-npr-z0-9]{11,17}" autocapitalize="characters" spellcheck="false" autocomplete="off" aria-label="Vehicle 1 VIN" aria-describedby="vin-note" placeholder="Vehicle 1 VIN" required>
             </div>
+            <small id="vin-note" class="contact-preference-note">Enter each vehicle’s VIN. Modern VINs have 17 letters and numbers; older vehicles may have fewer. VINs do not use I, O, or Q.</small>
           </div>
 
           <div class="field full">
@@ -166,6 +241,11 @@
             <textarea id="message" name="Message" placeholder="Optional. Please do not include Social Security numbers, driver's-license numbers, payment information, or other highly sensitive information."></textarea>
           </div>
         </div>
+
+        <label class="check">
+          <input type="checkbox" name="Driver Information Permission" value="Yes" required>
+          <span>I am providing my own information, or have permission to provide the other people’s information in this request. For anyone under 18, I am their parent or legal guardian, or have permission from their parent or legal guardian.</span>
+        </label>
 
         <label class="check">
           <input type="checkbox" name="Contact Consent" value="Yes" required>
@@ -195,13 +275,48 @@
     const vehicleSelect = document.getElementById('vehicles');
     const vinFields = document.getElementById('vinFields');
     const storedVinValues = new Map();
+    const storedDriverValues = new Map();
+    const driverCount = document.getElementById('extra-drivers');
+    const driverFields = document.getElementById('driverFields');
+    const today = new Date().toISOString().slice(0, 10);
+    document.querySelectorAll('input[type=date]').forEach(input => { input.max = today; });
+
+    function renderDriverFields() {
+      driverFields.querySelectorAll('input').forEach(input => storedDriverValues.set(input.name, input.value));
+      const selectedCount = Number(driverCount.value || '1');
+      const count = Number.isInteger(selectedCount) && selectedCount >= 1 ? Math.min(selectedCount, 20) : 1;
+      driverFields.replaceChildren();
+      for (let i = 1; i <= count; i++) {
+        for (const kind of ['Name', 'Date of Birth']) {
+          const field = document.createElement('div');
+          field.className = 'field';
+          const label = document.createElement('label');
+          const input = document.createElement('input');
+          input.id = (kind === 'Name' ? 'driver-name-' : 'driver-dob-') + i;
+          input.name = `Additional Driver ${i} ${kind}`;
+          label.htmlFor = input.id;
+          label.textContent = `Additional Driver ${i} ${kind === 'Name' ? 'Full Name' : kind} *`;
+          input.type = kind === 'Name' ? 'text' : 'date';
+          if (kind === 'Name') input.maxLength = 200;
+          else { input.min = '1900-01-01'; input.max = today; }
+          input.autocomplete = 'off';
+          input.required = true;
+          input.value = storedDriverValues.get(input.name) || '';
+          field.append(label, input);
+          driverFields.appendChild(field);
+        }
+      }
+      updateCoverageFields();
+    }
+    driverCount.addEventListener('input', renderDriverFields);
+    driverCount.addEventListener('change', renderDriverFields);
 
     function renderVinFields() {
       vinFields.querySelectorAll('input').forEach((input, index) => {
         storedVinValues.set(index + 1, input.value);
       });
-      let count = parseInt(vehicleSelect.value || '1', 10);
-      if (count > 6) count = 6;
+      const selectedCount = Number(vehicleSelect.value || '1');
+      const count = Number.isInteger(selectedCount) && selectedCount >= 1 ? Math.min(selectedCount, 50) : 1;
       vinFields.innerHTML = '';
       for (let i = 1; i <= count; i++) {
         const input = document.createElement('input');
@@ -210,6 +325,11 @@
         input.id = 'vehicle-vin-' + i;
         input.maxLength = 17;
         input.minLength = 11;
+        input.pattern = '[A-HJ-NPR-Za-hj-npr-z0-9]{11,17}';
+        input.autocomplete = 'off';
+        input.setAttribute('autocapitalize', 'characters');
+        input.spellcheck = false;
+        input.setAttribute('aria-describedby', 'vin-note');
         input.setAttribute('aria-label', 'Vehicle ' + i + ' VIN');
         input.value = storedVinValues.get(i) || '';
         input.placeholder = `Vehicle ${i} VIN`;
@@ -220,6 +340,7 @@
       updateCoverageFields();
     }
 
+    vehicleSelect.addEventListener('input', renderVinFields);
     vehicleSelect.addEventListener('change', renderVinFields);
 
 
@@ -238,17 +359,22 @@
     const params = new URLSearchParams(location.search);
     const coverageSelect = document.getElementById('insurance');
     function updateCoverageFields() {
-      const needsVehicles = ['Auto Insurance', 'Truck / Commercial Auto Insurance', 'SR-22'].includes(coverageSelect.value);
-      document.querySelectorAll('[data-auto-field]').forEach(field => {
-        field.hidden = !needsVehicles;
+      const needsVehicles = !coverageSelect.value || ['Auto Insurance', 'Truck / Commercial Auto Insurance', 'SR-22'].includes(coverageSelect.value);
+      document.querySelectorAll('[data-auto-field], [data-show-when]').forEach(field => {
+        const show = (!field.hasAttribute('data-auto-field') || needsVehicles) && (!field.dataset.showWhen || document.getElementById(field.dataset.showWhen).value === (field.dataset.showValue || 'Yes'));
+        field.hidden = !show;
         field.querySelectorAll('input, select').forEach(input => {
           if (!Object.hasOwn(input.dataset, 'coverageRequired')) input.dataset.coverageRequired = String(input.required);
-          input.required = needsVehicles && input.dataset.coverageRequired === 'true';
-          input.disabled = !needsVehicles;
+          input.required = show && input.dataset.coverageRequired === 'true';
+          input.disabled = !show;
         });
       });
     }
     coverageSelect.addEventListener('change', updateCoverageFields);
+    document.getElementById('tickets').addEventListener('change', updateCoverageFields);
+    document.getElementById('accidents').addEventListener('change', updateCoverageFields);
+    document.getElementById('insured').addEventListener('change', updateCoverageFields);
+    document.getElementById('onlydriver').addEventListener('change', updateCoverageFields);
     const requested = params.get('coverage');
     if ([...coverageSelect.options].some(option => option.value === requested)) coverageSelect.value = requested;
     updateCoverageFields();
@@ -261,9 +387,11 @@
 
     // Submit directly to our owned intake service, which saves the request before email notification.
     form.addEventListener('submit', function() {
+      vinFields.querySelectorAll('input').forEach(input => { input.value = input.value.trim().toUpperCase(); });
       document.getElementById('marketingOptInRecordedAt').value = document.getElementById('marketingEmailOptIn').checked ? new Date().toISOString() : 'Not subscribed';
       statusEl.textContent = 'Saving your request securely with Action Insurance...';
     });
   </script>
 </body></html>
+
 
